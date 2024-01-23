@@ -5,6 +5,7 @@ export function buildDevServer(port: number): DevServerConfiguration {
         compress: true,
         open: true,
         historyApiFallback: true,
+        hot: true,
     };
 
 }

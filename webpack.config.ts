@@ -10,12 +10,13 @@ const paths: BuildPaths = {
   entry: path.resolve(__dirname, "src", "index.tsx"),
   build: path.resolve(__dirname, "dist"),
   html: path.resolve(__dirname, "public", "index.html"),
+  src: path.resolve(__dirname, "src"),
 };
 
 export default (env: {mode: string, port: number}) => {
-  const mode = (env.mode as BuildMode) || "development";
+  const mode: BuildMode = (env.mode as BuildMode) || "development";
   const port = env.port || 3000;
-  const { entry, build } = paths;
+  const { entry, build, src } = paths;
   const isDev = mode === "development";
 
   const config: Configuration = {
@@ -26,11 +27,11 @@ export default (env: {mode: string, port: number}) => {
       filename: "[name].[contenthash].js",
       clean: true,
     },
-    plugins: buildPlugins(paths),
+    plugins: buildPlugins(paths, isDev),
     module: {
       rules: buildLoaders(isDev),
     },
-    resolve: buildResolvers(),
+    resolve: buildResolvers(src),
     devtool: isDev ? "inline-source-map" : undefined,
     devServer: isDev ? buildDevServer(Number(port)) : undefined,
   };
