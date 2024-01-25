@@ -1,23 +1,35 @@
 .sidebar {
-    height: calc(100vh - var(--navbar-height));
-    width: var(--sidebar-width);
-    background-color: var(--inverted-bg-color);
     position: relative;
+
+    width: var(--sidebar-width);
+    height: calc(100vh - var(--navbar-height));
+
+    background-color: var(--inverted-bg-color);
 }
 
 .collapsed {
     width: var(--sidebar-width-collapsed);
+
     transition: width 0.3s ease-in-out;
 }
 
 .switchers {
     position: absolute;
     bottom: 20px;
+
     display: flex;
     justify-content: center;
+
     width: 100%;
 }
 
 .lang {
     margin-left: 20px;
+}
+
+.toggleSidebar {
+    width: 50px;
+    height: 50px;
+
+    color: var(--inverted-secondary-color);
 }

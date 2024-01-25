@@ -4,12 +4,13 @@
 @import "themes/dark";
 
 .app {
-    font-size: var(--font-size-l);
-    font: var(--font-l);
-    background: var(--bg-color);
-    color: var(--primary-color);
-
     min-height: 100vh;
+
+    color: var(--primary-color);
+    font: var(--font-l);
+    font-size: var(--font-size-l);
+
+    background: var(--bg-color);
 }
 
 .content-page {
@@ -19,6 +20,7 @@
 
 .page-wrapper {
     flex-grow: 1;
+
     padding: 20px;
 }
 

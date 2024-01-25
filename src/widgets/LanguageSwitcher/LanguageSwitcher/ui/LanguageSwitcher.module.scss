@@ -1,6 +1,8 @@
 .languageSwitcher {
-    background-color: var(--inverted-bg-color);
-    color: var(--icon-color);
     width: 35px;
     height: 35px;
+
+    color: var(--inverted-secondary-color);
+
+    background-color: var(--inverted-bg-color);
 }

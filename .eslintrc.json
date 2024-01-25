@@ -12,13 +12,14 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": ["@stylistic"],
+    "plugins": ["react", "@stylistic", "i18next"],
     "rules": {
         "react/react-in-jsx-scope": "off",
         "react/jsx-uses-react": "off",
         "@stylistic/indent": "error",
         "@stylistic/quotes": "error",
         "@stylistic/semi": "error",
-        "@typescript-eslint/strict-boolean-expressions": "off"
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "i18next/no-literal-string": ["error", { "markupOnly": true }]
     }
 }
