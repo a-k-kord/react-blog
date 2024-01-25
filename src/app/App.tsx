@@ -1,13 +1,12 @@
 import { useTheme } from "app/providers/ThemeProvider";
 import classnames from "classnames";
-import { Suspense } from "react";
+import { type FC, Suspense } from "react";
 import { Navbar } from "widgets/Navbar";
 import { Sidebar } from "widgets/Sidebar";
 import { AppRouter } from "./providers/router/ui/AppRouter";
 import "./styles/index.scss";
-import { useTranslation } from "react-i18next";
 
-export const App = () => {
+export const App: FC = () => {
     const { theme } = useTheme();
 
     return (

@@ -1,6 +1,6 @@
-import { useTheme } from 'app/providers/ThemeProvider';
+import { useTheme } from "app/providers/ThemeProvider";
 import classNames from "classnames";
-import ThemeIcon from 'shared/assets/icons/theme.svg';
+import ThemeIcon from "shared/assets/icons/theme.svg";
 import { Button, ThemeButton } from "shared/ui/AppLink/Button/Button";
 import cls from "./ThemeSwitcher.module.scss";
 
@@ -8,8 +8,10 @@ interface ThemeSwitcherProps {
     className?: string;
 }
 
-export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
-    const {toggleTheme} = useTheme();
+export const ThemeSwitcher = ({
+    className,
+}: ThemeSwitcherProps): JSX.Element => {
+    const { toggleTheme } = useTheme();
 
     return (
         <Button
@@ -17,7 +19,7 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
             className={classNames(cls.themeSwitcher, className)}
             onClick={toggleTheme}
         >
-            <ThemeIcon/>
+            <ThemeIcon />
         </Button>
     );
 };

@@ -1,16 +1,14 @@
 import { useTranslation } from "react-i18next";
 
-type Props = {}
+const AboutPage = (): JSX.Element => {
+    const { t } = useTranslation("about");
 
-const AboutPage = (props: Props) => {
-  const {t} = useTranslation('about');
+    return (
+        <>
+            <div>{t("about.About Page")}</div>
+            <div>{t("about.About Page Other")}</div>
+        </>
+    );
+};
 
-  return (
-    <>
-    <div>{t('About Page')}</div>
-    <div>{t('About Page Other')}</div>
-    </>
-  )
-}
-
-export default AboutPage
+export default AboutPage;

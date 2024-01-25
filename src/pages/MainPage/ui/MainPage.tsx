@@ -1,13 +1,9 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 
-type Props = {}
+const MainPage = (): JSX.Element => {
+    const { t } = useTranslation("main");
 
-const MainPage = (props: Props) => {
-  const {t} = useTranslation('main');
+    return <div>{t("main.Main Page")}</div>;
+};
 
-  return (
-    <div>{t('Main Page')}</div>
-  )
-}
-
-export default MainPage
+export default MainPage;

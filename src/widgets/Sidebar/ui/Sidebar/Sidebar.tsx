@@ -8,10 +8,10 @@ interface SidebarProps {
     className?: string;
 }
 
-export const Sidebar = ({ className }: SidebarProps) => {
+export const Sidebar = ({ className }: SidebarProps): JSX.Element => {
     const [collapsed, setCollapsed] = useState(false);
 
-    const toggle = () => {
+    const toggle = (): void => {
         setCollapsed((prev) => !prev);
     };
 
@@ -24,7 +24,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
             <button onClick={toggle}>toggle</button>
             <div className={classNames(cls.switchers)}>
                 <ThemeSwitcher />
-                <LanguageSwitcher className={classNames(cls.lang)}/>
+                <LanguageSwitcher className={classNames(cls.lang)} />
             </div>
         </div>
     );

@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 import { routeConfig } from "shared/config/routeConfig/routeConfig";
 
-export const AppRouter = () => {
+export const AppRouter = (): JSX.Element => {
     return (
         <Suspense fallback={<div className="page-wrapper">Loading...</div>}>
             <Routes>

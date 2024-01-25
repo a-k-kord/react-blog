@@ -1,0 +1,24 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "standard-with-typescript",
+        "plugin:react/recommended",
+        "plugin:@stylistic/disable-legacy"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": ["@stylistic"],
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-uses-react": "off",
+        "@stylistic/indent": "error",
+        "@stylistic/quotes": "error",
+        "@stylistic/semi": "error",
+        "@typescript-eslint/strict-boolean-expressions": "off"
+    }
+}
