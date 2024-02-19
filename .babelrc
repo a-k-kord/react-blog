@@ -1,6 +1,0 @@
-{
-    "plugins": [
-      "i18next-extract"
-      // […] your other plugins […]
-    ]
-  }
